@@ -1,6 +1,6 @@
 {
   "name": "components-workflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,7 +12,8 @@
     "docs:build": "vuepress build docs",
     "commitmsg": "validate-commit-msg",
     "commit": "git-cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "preversion": "yarn test:unit && yarn changelog"
   },
   "dependencies": {
     "vue": "^2.6.6",
